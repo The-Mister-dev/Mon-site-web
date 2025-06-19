@@ -8,6 +8,19 @@
     <link rel="stylesheet" href="CSS/style.css">
     <title>IdentiWeb.</title>
 </head>
+<script>
+  function acceptCookies() {
+    localStorage.setItem('cookiesAccepted', 'true');
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
+
+  window.onload = function() {
+    if (!localStorage.getItem('cookiesAccepted')) {
+      document.getElementById('cookie-banner').style.display = 'block';
+    }
+  };
+</script>
+
 <body>
     <nav class="navbar navbar-expand-lg background">
         <div class="container">
@@ -26,13 +39,16 @@
               <li class="nav-item">
                 <a class="nav-link" href="#left-img">À-propos</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="nos-réalisations.html">Nos réalisations</a>
+              </li>
             </ul>
-            <a href="#Contact" class="btn">Contactez Moi</a>
+            <a href="formulaire.html" class="btn">Contactez Moi</a>
           </div>
         </div>
     </nav>
       <!--Section hero-->
-      <Section class="hero">
+    <Section class="hero">
         <div class="container mx-auto my-5 p-0">
             <div class="row p-5">
                 <div class="d-flex">
@@ -53,7 +69,7 @@
                             </button>
                         </form>
                     </div>
-                    <div class=" container-fluid d-flex align-items-center mt-5">
+                    <div class=" container-fluid d-flex align-items-center mt-5 ticone">
                         <div class="left d-flex">
                             <i class="bi bi-ubuntu iconir"></i>
                             <div>
@@ -77,27 +93,33 @@
                 </div>
             </div>
         </div>
-      </Section>
+    </Section>
       <!--compagny-->
-      <div class="d-flex justify-content-center g-5 p-5 my-5">
-        <h3 class="compagny my-4">20+ Entreprises <br>nous font confiance</h3>
-        <div class="d-flex g-5 my-4">
+    <div class="d-flex justify-content-center g-5 p-5 my-5 patner">
+        <h3 class="compagny my-4">Ils sont nombreux <br> à nous faire confiance</h3>
+        <div class="d-flex g-5 my-4 sponsor">
             <div class="text-center">
-                <img src="images/airbnb.png" alt="">
+                <img src="images/IDC.jpg" alt="">
             </div>
             <div class="text-center">
-                <img src="images/discord.png" alt="">
+                <img src="images/eben1.jpg" alt="">
             </div>
             <div class="text-center">
-                <img src="images/intercom.png" alt="">
+                <img src="images/exple1.jpg" alt="">
             </div>
             <div class="text-center">
-                <img src="images/pinterest.png" alt="">
+                <img src="images/exeple2.jpg" alt="">
+            </div>
+            <div class="text-center">
+                <img src="images/patisrie.jpg" alt="">
+            </div>
+            <div class="text-center">
+                <img src="images/exple3.jpg" alt="">
             </div>
         </div>
-      </div>
-      <!--3 images compilées à gauche et du texte à gauche-->
-      <section class="seconde-hero">
+    </div>
+      <!--3 images compilées à droite et du texte à gauche-->
+    <section id="seconde-hero">
         <div class="container">
             <div class="rows d-flex">
                 <div class="col-lg-6">
@@ -125,7 +147,7 @@
                     <div class="text-start titre">
                         <h1 class="avenir">Définir l’avenir des expériences en ligne !</h1>
                         <p class="avenir-desc my-4">Entrez dans une nouvelle ère de réussite numérique avec Moi. <br> Mon équipe allie design de pointe et développement
-                            robuste pour <br> créer des sites web captivants et vous une stratégie de marque qui vous ressemble.</p>
+                            robuste pour <br> créer des sites web captivants et une stratégie de marque qui vous ressemble.</p>
                         <div class="icon">
                             <span><i class="bi bi-patch-check-fill"></i> Accent mis sur les solutions axées sur le retour <br> sur investissement</span><br><br>
                             <span><i class="bi bi-patch-check-fill"></i> Une équipe d'experts aux compétences diversifiées</span><br><br>
@@ -135,8 +157,8 @@
                     </div>
             </div>
         </div>
-      </section>
-      <section id="best-trip">
+    </section>
+    <section id="best-trip">
         <div class="container carte">
             <p class="text-center text-white p-1" style="width: 25rem;">🚀 Des solutions innovantes, des résultats mesurables</p>
             <h1 class="text-center my-5">Nous nous spécialisons dans les <br> services suivants</h1>
@@ -147,7 +169,7 @@
                     <div class="card-body">
                         <h5 class="card-title my-3">Développement de site web</h5>
                         <p class="card-text mb-4">Création de sites web modernes et performants.</p>
-                        <a href="#" class="btn-card">En savoir plus</a>
+                        <a href="formulaire.html" class="btn-card">Obtenir un devis</a>
                     </div>
                 </div>
                 <div class="card text-center" style="width: 18rem;">
@@ -155,7 +177,7 @@
                     <div class="card-body">
                         <h5 class="card-title my-3 ">Conception logo design</h5>
                         <p class="card-text mb-4 ">Logos uniques et mémorables pour votre marque.</p>
-                        <a href="#" class="btn-card">En savoir plus</a>
+                        <a href="formulaire.html" class="btn-card">Obtenir un devis</a>
                     </div>
                 </div>
                 <div class="card text-center" style="width: 18rem;">
@@ -164,7 +186,7 @@
                         
                         <h5 class="card-title my-3 ">Montage vidéo</h5>
                         <p class="card-text mb-4">Vidéos impactantes et professionnelles pour tous usages.</p>
-                        <a href="#" class="btn-card">En savoir plus</a>
+                        <a href="formulaire.html" class="btn-card">Obtenir un devis</a>
                     </div>
                 </div>
                 <div class="card text-center" style="width: 18rem;">
@@ -173,7 +195,7 @@
                         
                         <h5 class="card-title my-3 ">Création d'identité visuelle</h5>
                         <p class="card-text mb-4 ">Une identité visuelle cohérente et percutante.</p>
-                        <a href="#" class="btn-card">En savoir plus</a>
+                        <a href="formulaire.html" class="btn-card">Obtenir un devis</a>
                     </div>
                 </div>
             </div>
@@ -185,7 +207,7 @@
                         
                         <h5 class="card-title my-3">Création de stratégie de marque</h5>
                         <p class="card-text mb-5"> Positionnement stratégique pour une marque forte.</p>
-                        <a href="#" class="btn-card">En savoir plus</a>
+                        <a href="formulaire.html" class="btn-card">Obtenir un devis</a>
                     </div>
                 </div>
                 <div class="card text-center" style="width: 18rem;">
@@ -194,7 +216,7 @@
                         
                         <h5 class="card-title my-3">Publicité Facebook Ads</h5>
                         <p class="card-text mb-4">Campagnes publicitaires optimisées pour plus de conversions.</p>
-                        <a href="#" class="btn-card">En savoir plus</a>
+                        <a href="formulaire.html" class="btn-card">Obtenir un devis</a>
                     </div>
                 </div>
                 <div class="card text-center" style="width: 18rem;">
@@ -203,7 +225,7 @@
                         
                         <h5 class="card-title my-3">Création d'affiche pub</h5>
                         <p class="card-text mb-5">Affiches publicitaires attractives et engageantes.</p>
-                        <a href="#" class="btn-card">En savoir plus</a>
+                        <a href="formulaire.html" class="btn-card">Obtenir un devis</a>
                     </div>
                 </div>
                 <div class="card text-center" style="width: 18rem;">
@@ -212,12 +234,12 @@
                         
                         <h5 class="card-title my-3">Maquette Graphique Design</h5>
                         <p class="card-text mb-4">Conception de maquettes visuelles innovantes et intuitives.</p>
-                        <a href="#" class="btn-card">En savoir plus</a>
+                        <a href="formulaire.html" class="btn-card">Obtenir un devis</a>
                     </div>
                 </div>
             </div>    
         </div>
-      </section>
+    </section>
     <div class="container mx-auto trois">
         <p class="text-center text-black p-1" style="width: 20rem;">💵 Forfaits tarifaires transparents</p>
         <h1 class="text-center fw-bold titrex">Obtenez un plan qui évolue avec vous</h1>
@@ -258,7 +280,6 @@
             <div class="col-lg-6">
                 <p class="vivid text-center" style="width: 17rem;">💖 De vrais résultats de vrais clients</p>
                 <h1 class="vivid-1">Découvrez comment nous <br> avons aidé nos clients à réussir</h1>
-                <p class="vivid-2">Plus de 20 agences Travaillent avec nous</p>
 
                 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
@@ -333,25 +354,25 @@
             <div class="col-lg-3">
                 <h4>liens</h4>
                 <ul class="longlet list-unstyled">
-                    <li><a class="onglet" href="#">À-propos</a></li>
-                    <li><a class="onglet" href="#">Contact</a></li>
-                    <li><a class="onglet" href="#">Services</a></li>
+                    <li><a class="onglet" href="#seconde-hero">À-propos</a></li>
+                    <li><a class="onglet" href="formulaire.html">Contact</a></li>
+                    <li><a class="onglet" href="#best-trip">Services</a></li>
+                    <li><a class="onglet" href="nos-réalisations.html">Nos réalisations</a></li>
                 </ul>
             </div>
             <div class="col-lg-3">
                 <h4>Renseignement</h4>
                 <ul class="longlet list-unstyled">
                     <li><a class="onglet" href="#">FAQ</a></li>
-                    <li><a class="onglet" href="#">Documents</a></li>
-                    <li><a class="onglet" href="#">Politique de confidentialité</a></li>
-                    <li><a class="onglet" href="#">Mentions légales</a></li>
+                    <li><a class="onglet" href="cgu.html">CGU</a></li>
+                    <li><a class="onglet" href="politique-de-confidentialité.html">Politique de confidentialité</a></li>
+                    <li><a class="onglet" href="mention-legales.html">Mentions légales</a></li>
                 </ul>
             </div>
             <div class="col-lg-3">
-                <h4>App disponible sur</h4>
+                <h4>Certifié développeur par</h4>
                 <div class="partner">
-                    <img src="images/playstore.png" alt="">
-                    <img src="images/appstore.png" alt="">
+                    <img src="images/certifier.png" alt="">
                 </div>
                 <div class="follow">
                     <h4>Suivez-nous sur</h4>
@@ -364,11 +385,23 @@
                 </div>
             </div>
         </div>
-        <hr>
-        Copyrights ©2025 IdentiWeb.
     </footer>
+    <div class="copyright">
+        <p> Copyrights ©2025 IdentiWeb.</p>
+    </div>
+    <div id="cookie-banner" style="position: fixed; bottom: 20px; left: 20px; right: 20px; background-color: #ffffff; color: black; padding: 20px; border-radius: 10px; z-index: 1000; display: none;">
+    <p style="margin: 0;">
+    Ce site utilise des cookies pour améliorer votre expérience. En poursuivant votre navigation, vous acceptez leur utilisation.
+    <button onclick="acceptCookies()" style="background: #32cd32; color: white; padding: 10px 20px; border: none; border-radius: 8px; margin-left: 15px; cursor: pointer;">
+      J'accepte
+    </button>
+    </p>
+    </div>
+
     <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="script.js"></script>
+    
+
 </body>
 </html> 
